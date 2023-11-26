@@ -95,6 +95,7 @@ fun HomeContent(
                 CoinItem(
                     name = coin.name,
                     price = coin.price,
+                    photoUrl = coin.photoUrl,
                     modifier = Modifier
 
                         .fillMaxWidth(),
