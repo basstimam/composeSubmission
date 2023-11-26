@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.cryptoapp.data.CoinRepository
 import com.example.cryptoapp.model.Coin
-import com.example.cryptoapp.model.FakeCoinsData
 import com.example.cryptoapp.ui.theme.common.UiState
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

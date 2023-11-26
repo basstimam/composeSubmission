@@ -3,4 +3,6 @@
     <string name="search_coin">Search Coin\n</string>
     <string name="scroll_to_top">scroll to top</string>
     <string name="about_page">about page\n</string>
+    <string name="about_image">image in about page\n</string>
+    <string name="about_page_icon">floating action button to routing about page\n</string>
 </resources>

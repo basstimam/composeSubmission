@@ -1,7 +1,5 @@
 package com.example.cryptoapp.ui.theme.screen.detail
 
-import androidx.annotation.DrawableRes
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,18 +20,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.example.cryptoapp.R
 import com.example.cryptoapp.di.Injection
 import com.example.cryptoapp.ui.theme.common.UiState
 import com.example.cryptoapp.ui.theme.screen.home.ViewModelFactory
@@ -149,7 +143,7 @@ fun DetailContent(
                 )
                 Spacer(modifier = Modifier.height(8.dp))
                 Text(
-                    text = "Price : ${price}",
+                    text = "Price : $${price}",
                     style = MaterialTheme.typography.bodyMedium,
                     textAlign = TextAlign.Justify,
                 )
