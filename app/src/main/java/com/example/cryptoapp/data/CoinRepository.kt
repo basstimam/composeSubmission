@@ -1,9 +1,21 @@
 package com.example.cryptoapp.data
 
+import android.app.Application
+import android.util.Log
+import com.example.cryptoapp.R
 import com.example.cryptoapp.model.Coin
 import com.example.cryptoapp.model.FakeCoinsData
 
-class CoinRepository {
+
+
+class CoinRepository(private val appContext : Application) {
+
+    init {
+
+        val appName = appContext.resources.getString(appContext.applicationInfo.labelRes)
+       Log.d("CoinRepository", "App name from app: $appName")
+
+    }
     fun getCoins(): List<Coin>{
         return FakeCoinsData.coins
     }
@@ -18,24 +30,4 @@ class CoinRepository {
 
 
 
-
-
-
-
-
-
-
-
-
-    companion object {
-        @Volatile
-        private var instance: CoinRepository? = null
-
-        fun getInstance(): CoinRepository =
-            instance ?: synchronized(this) {
-                CoinRepository().apply {
-                    instance = this
-                }
-            }
-    }
 }

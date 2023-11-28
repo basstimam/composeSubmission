@@ -146,3 +146,7 @@ w
 G.idea/sonarlint/issuestore/9/9/99b99b3529220088a2d7fece4eea494c702fa8bf,d\e\dec417fa4741ed643993e97871b0aae7e2bf8917
 Å
 Q.idea/sonarlint/securityhotspotstore/d/2/d2a4383452aad84a18429a5844d31330a012a9e6,7\f\7fcac164c7a46b8fc6411ea93226c884af6044db
+g
+7app/src/main/java/com/example/cryptoapp/di/AppModule.kt,4\d\4d944d0616515884efd0802ddd9d9dbc43a10122
+g
+7app/src/main/java/com/example/cryptoapp/di/CryptoApp.kt,0\d\0d835e8c33ef60a04fe233bd9b8dc2154689f9ba

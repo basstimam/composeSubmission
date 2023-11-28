@@ -25,26 +25,22 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.hilt.navigation.compose.hiltViewModel
+
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
-import com.example.cryptoapp.di.Injection
 import com.example.cryptoapp.ui.theme.common.UiState
-import com.example.cryptoapp.ui.theme.screen.home.ViewModelFactory
 
 @Composable
 fun DetailScreen(
     coinId: String,
-    viewModel: DetailViewModel = viewModel(
-    factory = ViewModelFactory(
-        Injection.provideRepository()
-    )
-),
+
     navigateBack: () -> Unit,
 
 
 
     ) {
+    val viewModel = hiltViewModel<DetailViewModel>()
     viewModel.uiState.collectAsState(initial = UiState.Loading).value.let { uiState ->
         when (uiState) {
             is UiState.Loading -> {
@@ -64,7 +60,9 @@ fun DetailScreen(
 
                 )
             }
-            is UiState.Error -> {}
+            is UiState.Error -> {
+                Text(text = uiState.errorMessage)
+            }
         }
     }
 

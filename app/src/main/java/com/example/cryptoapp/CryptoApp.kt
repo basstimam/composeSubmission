@@ -25,6 +25,9 @@ import com.example.cryptoapp.ui.theme.screen.about.AboutScreen
 import com.example.cryptoapp.ui.theme.screen.detail.DetailScreen
 import com.example.cryptoapp.ui.theme.screen.home.HomeScreen
 
+
+
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CryptoApp(
